@@ -1,6 +1,6 @@
 # docker-graphite
 
-This project provides resources for deploying Graphite in Docker containers.
+This project provides resources for deploying Graphite in Docker.
 
 ## Image Platform
 
