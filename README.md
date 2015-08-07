@@ -14,10 +14,10 @@ EPEL for RHEL7
 
 ## Building
 
- 1. Build the MySQL image:
+ 1. Build the MariaDB image:
 
     ```
-    $ (cd mysql && docker build -t graphite-mysql .)
+    $ (cd mariadb && docker build -t graphite-mariadb .)
     ```
 
  2. Build the Graphite image:
@@ -28,20 +28,20 @@ EPEL for RHEL7
 
 ## Launching Graphite
 
- 1. Launch the MySQL image:
+ 1. Launch the MariaDB image:
 
     ```
-    $ docker run -d --name graphite-mysql graphite-mysql
+    $ docker run -d --name graphite-mariadb graphite-mariadb
     ```
 
  2. Launch the Graphite image:
 
     ```
-    $ docker run -d --link graphite-mysql:mysql --name graphite graphite
+    $ docker run -d --link graphite-mariadb:mariadb --name graphite graphite
     ```
 
 ## Networking
 
-The MySQL image exposes ports ...
+The MariaDB image exposes ports ...
 
 The Graphite image exposes ports ...
