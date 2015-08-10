@@ -5,6 +5,8 @@ RUN yum install -y --disablerepo=* --enablerepo=rhel-7-server-rpms --enablerepo=
 
 VOLUME ["/var/lib/carbon"]
 
-EXPOSE 2003
+EXPOSE 2003 2004 7002
 
-ENTRYPOINT ["/usr/bin/carbon-cache", "--config=/etc/carbon/carbon.conf", "--pidfile=/var/run/carbon-cache.pid", "--logdir=/var/log/carbon/", "start"]
+# Launch the carbon-cache service.
+# The "--debug" option is given to ensure carbon-cache runs in the foreground.
+ENTRYPOINT ["/usr/bin/carbon-cache", "--config=/etc/carbon/carbon.conf", "--pidfile=/var/run/carbon-cache.pid", "--logdir=/var/log/carbon/", "--debug", "start"]
