@@ -21,12 +21,18 @@ EPEL for RHEL7
     $ docker build -t graphite-mariadb .
     ```
 
- 2. Build the Graphite images:
+ 2. Build the Graphite Carbon image:
 
     ```
-    $ cd graphite
-    $ docker build -t graphite-carbon -f Dockerfile.carbon .
-    $ docker build -t graphite-web -f Dockerfile.web .
+    $ cd graphite-carbon
+    $ docker build -t graphite-carbon .
+    ```
+
+ 3. Build the Graphite Web image:
+
+    ```
+    $ cd graphite-web
+    $ docker build -t graphite-web .
     ```
 
 ## Launching Graphite
