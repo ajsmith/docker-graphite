@@ -10,4 +10,4 @@ EXPOSE 2003 2004 7002
 
 # Launch the carbon-cache service.
 # The "--debug" option is given to ensure carbon-cache runs in the foreground.
-ENTRYPOINT ["/usr/bin/carbon-cache", "--config=/etc/carbon/carbon.conf", "--pidfile=/var/run/carbon-cache.pid", "--logdir=/var/log/carbon/", "--debug", "start"]
+ENTRYPOINT ["/usr/bin/carbon-cache", "--config=/etc/carbon/carbon.conf", "--pidfile=/var/run/carbon-cache.pid", "--debug", "start"]
