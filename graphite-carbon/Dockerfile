@@ -1,5 +1,7 @@
 FROM rhel7.1
 
+MAINTAINER Alex Smith <alex.smith@redhat.com>
+
 RUN yum install -y --disablerepo=* --enablerepo=rhel-7-server-rpms https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm \
     && yum install -y --disablerepo=* --enablerepo=rhel-7-server-rpms --enablerepo=rhel-7-server-optional-rpms --enablerepo=epel python-carbon \
     && yum clean all

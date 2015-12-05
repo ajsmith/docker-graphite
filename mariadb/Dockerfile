@@ -1,5 +1,7 @@
 FROM rhel7.1
 
+MAINTAINER Alex Smith <alex.smith@redhat.com>
+
 COPY graphite.sql /tmp/graphite.sql
 
 RUN yum install -y --disablerepo=* --enablerepo=rhel-7-server-rpms mariadb-server
