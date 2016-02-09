@@ -35,6 +35,15 @@ EPEL for RHEL7
     $ docker build -t graphite-web .
     ```
 
+### Customizing the Carbon Image
+
+The Carbon image copies in configuration files found in the
+*graphite-carbon/rhel* directory. To produce a Carbon image with custom
+configuration, the following files may be modified:
+
+  - *graphite-carbon/rhel/etc/carbon/carbon.conf*
+  - *graphite-carbon/rhel/etc/carbon/storage-schemas.conf*
+
 ## Launching Graphite
 
  1. Create a data volume container for MariaDB:
