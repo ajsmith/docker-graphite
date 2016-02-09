@@ -1,4 +1,4 @@
-FROM rhel7:latest
+FROM rhel:7.2
 
 MAINTAINER Alex Smith <alex.smith@redhat.com>
 
