@@ -6,6 +6,7 @@ RUN yum install -y --disablerepo=* --enablerepo=rhel-7-server-rpms https://dl.fe
     && yum install -y --disablerepo=* --enablerepo=rhel-7-server-rpms --enablerepo=rhel-7-server-optional-rpms --enablerepo=epel graphite-web graphite-web-selinux MySQL-python \
     && yum clean all
 
+ADD rhel/etc/graphite-web/dashboard.conf /etc/graphite-web/dashboard.conf
 ADD rhel/etc/graphite-web/local_settings.py /etc/graphite-web/local_settings.py
 ADD rhel/etc/httpd/conf.d/graphite-web.conf /etc/httpd/conf.d/graphite-web.conf
 
