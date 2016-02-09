@@ -100,6 +100,7 @@ The Graphite Web image exposes port 80.
 ### v1.1.0 unreleased
 
 - Allow Carbon image customization.
+- Modernize the Carbon image.
 
 ### v1.0.0 2015-12-04
 
