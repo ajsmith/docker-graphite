@@ -24,25 +24,25 @@ EPEL for RHEL7
  2. Build the Graphite Carbon image:
 
     ```
-    $ cd graphite-carbon
+    $ cd carbon
     $ docker build -t graphite-carbon .
     ```
 
  3. Build the Graphite Web image:
 
     ```
-    $ cd graphite-web
+    $ cd web
     $ docker build -t graphite-web .
     ```
 
 ### Customizing the Carbon Image
 
 The Carbon image copies in configuration files found in the
-*graphite-carbon/rhel* directory. To produce a Carbon image with custom
+*carbon/rhel* directory. To produce a Carbon image with custom
 configuration, the following files may be modified:
 
-  - *graphite-carbon/rhel/etc/carbon/carbon.conf*
-  - *graphite-carbon/rhel/etc/carbon/storage-schemas.conf*
+  - *carbon/rhel/etc/carbon/carbon.conf*
+  - *carbon/rhel/etc/carbon/storage-schemas.conf*
 
 ## Launching Graphite
 
