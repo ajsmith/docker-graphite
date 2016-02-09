@@ -4,7 +4,7 @@ This project provides resources for deploying Graphite in Docker.
 
 ## Image Platform
 
-RHEL 7.1
+RHEL7
 
 ## Image Dependencies
 
