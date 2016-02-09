@@ -94,3 +94,13 @@ The MariaDB image exposes port 3306
 The Graphite Carbon image exposes ports 2003, 2004, and 7002.
 
 The Graphite Web image exposes port 80.
+
+## Release Notes
+
+### v1.1.0 unreleased
+
+- Allow Carbon image customization.
+
+### v1.0.0 2015-12-04
+
+- Initial release.
