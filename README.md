@@ -97,7 +97,7 @@ The Graphite Web image exposes port 80.
 
 ## Release Notes
 
-### v1.1.0 unreleased
+### v1.1.0 2016-07-14
 
 - Allow Graphite Carbon image customization.
 - Allow Graphite Web image customization of dashboard configuration.
