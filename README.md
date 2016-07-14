@@ -102,6 +102,7 @@ The Graphite Web image exposes port 80.
 - Allow Graphite Carbon image customization.
 - Allow Graphite Web image customization of dashboard configuration.
 - Modernize images to latest RHEL7 and Graphite releases.
+- Enable Carbon UDP listener by default.
 
 ### v1.0.0 2015-12-04
 
