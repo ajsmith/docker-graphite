@@ -72,6 +72,10 @@ The Graphite Web image exposes port 80.
 
 ## Release Notes
 
+### v1.2.0 unreleased
+
+- Remove MariaDB image resources.
+
 ### v1.1.0 2016-07-14
 
 - Allow Graphite Carbon image customization.
