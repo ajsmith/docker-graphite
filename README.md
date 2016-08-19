@@ -14,21 +14,14 @@ EPEL for RHEL7
 
 ## Building
 
- 1. Build the MariaDB image:
-
-    ```
-    $ cd mariadb
-    $ docker build -t graphite-mariadb .
-    ```
-
- 2. Build the Graphite Carbon image:
+ 1. Build the Graphite Carbon image:
 
     ```
     $ cd carbon
     $ docker build -t graphite-carbon .
     ```
 
- 3. Build the Graphite Web image:
+ 2. Build the Graphite Web image:
 
     ```
     $ cd web
@@ -46,50 +39,32 @@ configuration, the following files may be modified:
 
 ## Launching Graphite
 
- 1. Create a data volume container for MariaDB:
+*Note: Before launching Graphite, you will have needed to configured and
+started a database for use with Graphite. The following steps assume this has
+already been done in a container named "graphite-db".*
+
+ 1. Launch Carbon:
 
     ```
-    $ docker create --name graphite-db-data graphite-mariadb
+    $ docker run -d -P --name graphite-carbon graphite-carbon
     ```
 
- 2. Launch the MariaDB image:
+ 2. Initialize the Graphite database:
 
     ```
-    $ docker run -d --volumes-from graphite-db-data --name graphite-mariadb \
-        graphite-mariadb
-    ```
-
- 3. Create a data volume container for Carbon:
-
-    ```
-    $ docker create --name carbon-data graphite-carbon
-    ```
-
- 4. Launch Carbon:
-
-    ```
-    $ docker run -d -P --volumes-from carbon-data --name graphite-carbon \
-        graphite-carbon
-    ```
-
- 5. Initialize the Graphite database:
-
-    ```
-    $ docker run --rm --link graphite-mariadb:db \
+    $ docker run --rm --link graphite-db:db \
         --entrypoint /usr/lib/python2.7/site-packages/graphite/manage.py \
         graphite-web syncdb --noinput
     ```
 
- 6. Launch Graphite:
+ 4. Launch Graphite:
 
     ```
-    $ docker run -d -P --volumes-from carbon-data --link graphite-mariadb:db \
+    $ docker run -d -P --volumes-from graphite-carbon --link graphite-db:db \
         --name graphite-web graphite-web
     ```
 
 ## Networking
-
-The MariaDB image exposes port 3306
 
 The Graphite Carbon image exposes ports 2003, 2004, and 7002.
 
