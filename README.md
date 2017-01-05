@@ -97,6 +97,10 @@ The Graphite Web image exposes port 80.
 
 ## Release Notes
 
+### v1.1.1 2017-01-05
+
+- Configure volumes for Graphite log directories.
+
 ### v1.1.0 2016-07-14
 
 - Allow Graphite Carbon image customization.

@@ -10,7 +10,7 @@ ADD rhel/etc/graphite-web/dashboard.conf /etc/graphite-web/dashboard.conf
 ADD rhel/etc/graphite-web/local_settings.py /etc/graphite-web/local_settings.py
 ADD rhel/etc/httpd/conf.d/graphite-web.conf /etc/httpd/conf.d/graphite-web.conf
 
-VOLUME ["/var/lib/graphite-web"]
+VOLUME ["/var/lib/graphite-web", "/var/log/graphite-web", "/var/log/httpd"]
 
 EXPOSE 80
 
