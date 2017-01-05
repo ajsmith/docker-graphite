@@ -72,7 +72,11 @@ The Graphite Web image exposes port 80.
 
 ## Release Notes
 
-### v1.2.0 unreleased
+### v1.2.1 2017-01-05
+
+- Configure volumes for Graphite log directories.
+
+### v1.2.0 2017-01-05
 
 - Remove MariaDB image resources.
 
